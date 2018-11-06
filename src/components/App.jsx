@@ -1,6 +1,6 @@
-import React from "react";
-import StyledHeader from "./Header";
-import TicketList from "./TicketList";
+import React from 'react'
+import StyledHeader from './Header'
+import TicketList from './TicketList'
 
 function App(){
   return (
@@ -8,7 +8,7 @@ function App(){
       <StyledHeader/>
       <TicketList/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
