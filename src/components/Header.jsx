@@ -14,7 +14,7 @@ function StyledHeader(){
         }
       `}</style>
     </div>
-  )
+  );
 }
 
 export default StyledHeader;

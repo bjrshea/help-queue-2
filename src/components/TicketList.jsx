@@ -1,40 +1,23 @@
-import React from 'react'
-import Ticket from './Ticket'
+import React from 'react';
+import Ticket from './Ticket';
+import PropTypes from 'prop-types';
 
-const masterTicketList = [
-  {
-    names: 'Thato and Haley',
-    location: '3a',
-    issue: 'firebase will not do something',
-  },
-  {
-    names: 'Sleater and Kinney',
-    location: '4b',
-    issue: 'webpack is a pain'
-  },
-  {
-    names: 'Imani and Jacob',
-    location: '8c',
-    issue: 'atom is too colorful'
-  }
-]
-
-function TicketList(){
-  // const listStyle = {
-  //   backgroundColor: 'red',
-  //   padding: '5px'
-
+function TicketList(props){
   return (
     <div>
       <hr/>
-      {masterTicketList.map((ticket, index) =>
+      {props.ticketList.map((ticket) =>
         <Ticket names={ticket.names}
           location={ticket.location}
           issue={ticket.issue}
-          key={index}/>
+          key={ticket.id}/>
       )}
     </div>
-  )
+  );
 }
 
-export default TicketList
+TicketList.propTypes = {
+  ticketList: PropTypes.array
+};
+
+export default TicketList;

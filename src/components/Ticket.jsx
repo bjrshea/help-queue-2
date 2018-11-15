@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Ticket(props){
   return (
     <div>
-        <style jsx>{`
+      <style jsx>{`
           div {
             background-color: #000;
             color: white;
@@ -24,13 +24,14 @@ function Ticket(props){
       <p><em>{props.issue}</em></p>
       <hr/>
     </div>
-  )
+  );
 }
 
 Ticket.propTypes = {
   names: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  issue: PropTypes.string
-}
+  issue: PropTypes.string,
+  id: PropTypes.string
+};
 
-export default Ticket
+export default Ticket;
