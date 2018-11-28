@@ -4,8 +4,8 @@ import NewTicketForm from './NewTicketForm';
 
 class NewTicketControl extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       formVisibleOnPage: false
     };
@@ -19,7 +19,7 @@ class NewTicketControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <NewTicketForm/>;
+      currentlyVisibleContent = <NewTicketForm />;
     } else {
       currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
     }
